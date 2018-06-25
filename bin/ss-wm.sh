@@ -145,7 +145,7 @@ echo "WGET TopN Report"
 #
 # Get the report / images.
 #
-#echo ${config[URL]} | wget  --recursive   -i - --user=${config[USERNAME]} --password=${config[PASSWORD]} -P ${config[TMP_DIR]} -nd -nv -q    # This line has wget debugs, use this if having troubles.
+#echo ${config[URL]} | wget  --recursive   -i - --user=${config[USERNAME]} --password=${config[PASSWORD]} -P ${config[TMP_DIR]} -nd -v   # This line has wget debugs, use this if having troubles.
 echo ${config[URL]} | wget  --recursive --no-check-certificate   -i - --user=${config[USERNAME]} --password=${config[PASSWORD]} -P ${config[TMP_DIR]} -nd -q
 
 #
