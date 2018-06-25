@@ -1,6 +1,6 @@
 <?php
 
-$VERSION=0.2.5;
+$VERSION=0.3;
 $CONFIG_FILE="";
 
 $myscript = $_SERVER["SCRIPT_FILENAME"];
@@ -115,7 +115,7 @@ function get_ss_group_port($group){
 
 #http://$STATSEEKER_IP/api/latest/cdt_port/?fields=deviceid,name,IF-MIB.ifIndex&groups=$group&links=none&index=3&limit=4000
 $url = <<<EOD
-$HTTP://$STATSEEKER_IP/api/port/?fields=device.name,deviceid,name,IF-MIB.ifIndex&links=none&index=3&indent=3&where={"groupid":["=",$group]}&limit=200
+$HTTP://$STATSEEKER_IP/api/port/?fields=device.name,deviceid,name,IF-MIB.ifIndex&links=none&index=3&indent=3&where={"groupid":["=",$group]}&limit=5000
 EOD;
 	$response = file_get_contents($url,false,$context);
 	$res = json_decode_nice($response,true);
